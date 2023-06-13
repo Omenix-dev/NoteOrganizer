@@ -14,14 +14,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 IConfiguration config = builder.Configuration; 
 builder.Services.AddControllers();
+builder.Services.AddTransient<IValidator<UserDto>, UserObjectValidator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<INoteService, NoteService>();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-//builder.Services.AddSwaggerConfiguration();
-builder.Services.AddTransient<IValidator<UserDto>, UserObjectValidator>();
 builder.Services.AddDbContext<NoteOrganizerDbContext>(options => options.UseSqlServer(config.GetConnectionString
     ("DefaultConnection")));
-//builder.Services.AddAuthenticationExtension(config);
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowAll", builder =>

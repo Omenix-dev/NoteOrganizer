@@ -17,18 +17,36 @@
     fluentAPI, fluentValidation, UnitOfWork
 
 ## ENDPOINT
+BASR URL = https://localhost:7076/
 
+USER CONTROLLER
+POST
+​/api​/User​/User​/register
+
+POST
+​/api​/User​/User​/login
+
+NOTE CONTROLLER
+POST
+/api/Note/Note/CreateNoteById
+POST
+​/api​/Note​/Note​/UpdateNoteById
+
+DELETE
+​/api​/Note​/Note​/DeleteNoteById
+
+GET
+​/api​/Note​/Note​/GetNotesById
+
+GET
+​/api​/Note​/Note​/GetNotesByUserId
     
 
 ## Instruction to run Application
 
-    1. install docker and docker-compose engine
-    2. go to directory of the application
-    3. enter "docker-compose build"
-    4. enter "docker-compose up -d"
-    5. for swagger documentation go to when the ochestrated container is running 
+    1. to run the application you must have an already running / installed sql server
+    2. then do uppdate database and make sure that the connection string marches your database connection string
 
-## Note : docker volumes
+## Note : Swagger Documentation
 
-    1.)  the database in the docker compose runs on a temporal data volume to create a the storage
-    2.)  open the docker compose file and uncomment the volume to enable the permanent database storage
+    1.)  https://localhost:7076/swagger/index.html

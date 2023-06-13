@@ -1,8 +1,11 @@
 ﻿using Azure;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using NoteOrganizer.Core.DTO;
 using NoteOrganizer.Core.Interface;
+using NoteOrganizer.DataAccess;
+using NoteOrganizer.DataAccess.Repository;
 using System.Drawing;
 using System.Net;
 
@@ -11,7 +14,6 @@ namespace NoteOrganizer.Extensions
     public class AuthenticationExceptionMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ILogger _logger;
         private readonly IUnitOfWork _unitOfWork;
 
 
@@ -19,14 +21,13 @@ namespace NoteOrganizer.Extensions
         /// constructor
         /// </summary>
         /// <param name="next"></param>
-        /// <param name="logger"></param>
-        public AuthenticationExceptionMiddleware(RequestDelegate next,
-                ILogger logger, IUnitOfWork service)
+       
+        public AuthenticationExceptionMiddleware(RequestDelegate next)
         {
 
-            _logger = logger;
+            var context = new NoteOrganizerDbContext(new DbContextOptions<NoteOrganizerDbContext>());
             _next = next;
-            _unitOfWork = service;
+            _unitOfWork = new UnitOfWork(context);
         }
 
 
