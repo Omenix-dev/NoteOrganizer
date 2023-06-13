@@ -2,8 +2,11 @@ using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using NoteOrganizer.Core.DTO;
+using NoteOrganizer.Core.Interface;
+using NoteOrganizer.Core.Services;
 using NoteOrganizer.Core.Utilities;
 using NoteOrganizer.DataAccess;
+using NoteOrganizer.DataAccess.Repository;
 using NoteOrganizer.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 IConfiguration config = builder.Configuration; 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<INoteService, NoteService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 //builder.Services.AddSwaggerConfiguration();
 builder.Services.AddTransient<IValidator<UserDto>, UserObjectValidator>();
 builder.Services.AddDbContext<NoteOrganizerDbContext>(options => options.UseSqlServer(config.GetConnectionString
@@ -36,6 +42,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<AuthenticationExceptionMiddleware>();
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 

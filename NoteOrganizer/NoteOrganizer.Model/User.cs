@@ -1,16 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿
 
 namespace NoteOrganizer.Model
 {
-    public class User
+    public class User : BaseModel
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Id { get; set; }
         public string UserName { get; set; }          
-        public string Password { get; set; }   
+        public string Password { get; set; }
         public string Role { get; set; }
+        public string AccessCode { get; set; }
         public IEnumerable<Note> Notes { get; set; }    
     }
 }

@@ -14,7 +14,7 @@ namespace NoteOrganizer.DataAccess.Repository
         {
             _context = context;
 
-        }
+        } 
 
         public INoteRepository NoteRepository => _noteRepository ??= new NoteRepository(_context);
         public IUserRepository UserRepository => _userRepository ??= new UserRepository(_context);
