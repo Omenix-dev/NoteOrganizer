@@ -4,7 +4,7 @@
 
     1.) NoteOrganizer : API project layer
     2.) NoteOrganizer.Model : contains api models
-    3.) NoteOrganizer.Repository : data access layer
+    3.) NoteOrganizer.DataAccess : data access layer
     4.) NoteOrganizer.Core : Contains the business Logic for the services
 
 ## Design Pattern

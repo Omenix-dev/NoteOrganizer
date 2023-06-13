@@ -4,6 +4,222 @@
     "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer\\NoteOrganizer.csproj": {}
   },
   "projects": {
+    "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\NoteOrganizer.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\NoteOrganizer.Core.csproj",
+        "projectName": "NoteOrganizer.Core",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\NoteOrganizer.Core.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\NoteOrganizer.Model.csproj": {
+                "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\NoteOrganizer.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.DataAccess\\NoteOrganizer.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.DataAccess\\NoteOrganizer.DataAccess.csproj",
+        "projectName": "NoteOrganizer.DataAccess",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.DataAccess\\NoteOrganizer.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\NoteOrganizer.Core.csproj": {
+                "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\NoteOrganizer.Core.csproj"
+              },
+              "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\NoteOrganizer.Model.csproj": {
+                "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\NoteOrganizer.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\NoteOrganizer.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\NoteOrganizer.Model.csproj",
+        "projectName": "NoteOrganizer.Model",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\NoteOrganizer.Model.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer\\NoteOrganizer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -32,7 +248,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\NoteOrganizer.Core.csproj": {
+                "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.Core\\NoteOrganizer.Core.csproj"
+              },
+              "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.DataAccess\\NoteOrganizer.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\USER\\source\\repos\\Baraaku-test\\NoteOrganizer\\NoteOrganizer.DataAccess\\NoteOrganizer.DataAccess.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -45,6 +268,28 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
